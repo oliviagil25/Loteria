@@ -9,21 +9,27 @@ namespace Loteria.Models.DbModels
     public class Uczestnik
     {
         [Key]
-        static int UczestnikId = 1;
+        public static int UczestnikId;
         public string Imie { get; set; }
         public string Nazwisko { get; set; }
         public string Pseudonim { get; set; }
 
         public virtual List<Nagroda> Nagrody { get; set; } = new List<Nagroda>();
+        static Uczestnik()
+        {
+            UczestnikId = 1;
+        }
 
-        public Uczestnik() { }
+        public Uczestnik() 
+        {
+            UczestnikId++;
+        }
 
         public Uczestnik(string imie, string nazwisko, string pseudonim)
         {
             Imie = imie;
             Nazwisko = nazwisko;
             Pseudonim = pseudonim;
-            UczestnikId = UczestnikId +1;
         }
     }
 }

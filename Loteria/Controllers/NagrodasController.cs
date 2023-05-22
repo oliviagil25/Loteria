@@ -37,9 +37,10 @@ namespace Loteria.Controllers
         }
 
         // GET: Nagrodas/Create
+        [HttpGet]
         public ActionResult Create()
         {
-            return View();
+            return View(new Nagroda());
         }
 
         // POST: Nagrodas/Create

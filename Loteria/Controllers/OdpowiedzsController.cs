@@ -38,10 +38,11 @@ namespace Loteria.Controllers
         }
 
         // GET: Odpowiedzs/Create
+        [HttpGet]
         public ActionResult Create()
         {
             ViewBag.PytanieId = new SelectList(db.Pytania, "PytanieId", "tresc");
-            return View();
+            return View(new Odpowiedz());
         }
 
         // POST: Odpowiedzs/Create

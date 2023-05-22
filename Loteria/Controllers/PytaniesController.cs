@@ -37,9 +37,10 @@ namespace Loteria.Controllers
         }
 
         // GET: Pytanies/Create
+        [HttpGet]
         public ActionResult Create()
         {
-            return View();
+            return View(new Pytanie());
         }
 
         // POST: Pytanies/Create
