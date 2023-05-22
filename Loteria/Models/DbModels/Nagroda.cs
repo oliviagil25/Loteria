@@ -13,6 +13,8 @@ namespace Loteria.Models.DbModels
         public string nagroda { get; set; }
 
         public Nagroda() { }
-        public Nagroda(string nagroda) {  this.nagroda = nagroda; }
+        public Nagroda(int NagrodaId, string nagroda) {  
+            this.NagrodaId= NagrodaId;
+            this.nagroda = nagroda; }
     }
 }

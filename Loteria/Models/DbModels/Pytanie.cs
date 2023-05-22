@@ -13,7 +13,10 @@ namespace Loteria.Models.DbModels
         public string tresc { get; set; }
 
         public Pytanie() { }
-        public Pytanie(string tresc) { this.tresc = tresc; }
+        public Pytanie(int PytanieId, string tresc) { 
+            this.PytanieId = PytanieId;
+            this.tresc = tresc; 
+        }
 
     }
     
