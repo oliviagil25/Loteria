@@ -9,7 +9,7 @@ namespace Loteria.Models.DbModels
     public class Uczestnik
     {
         [Key]
-        public int UczestnikId { get; set; }
+        static int UczestnikId = 1;
         public string Imie { get; set; }
         public string Nazwisko { get; set; }
         public string Pseudonim { get; set; }
@@ -18,12 +18,12 @@ namespace Loteria.Models.DbModels
 
         public Uczestnik() { }
 
-        public Uczestnik(int UczestnikId, string imie, string nazwisko, string pseudonim)
+        public Uczestnik(string imie, string nazwisko, string pseudonim)
         {
-            this.UczestnikId = UczestnikId;
             Imie = imie;
             Nazwisko = nazwisko;
             Pseudonim = pseudonim;
+            UczestnikId = UczestnikId +1;
         }
     }
 }

@@ -9,12 +9,18 @@ namespace Loteria.Models.DbModels
     public class Nagroda
     {
         [Key]
-        public int NagrodaId { get; set; }
+        public static int NagrodaId;
         public string nagroda { get; set; }
+        static Nagroda()
+        {
+            NagrodaId = 1;
+        }
 
-        public Nagroda() { }
-        public Nagroda(int NagrodaId, string nagroda) {  
-            this.NagrodaId= NagrodaId;
+        public Nagroda() 
+        {
+            NagrodaId++;
+        }
+        public Nagroda(string nagroda) {  
             this.nagroda = nagroda; }
     }
 }

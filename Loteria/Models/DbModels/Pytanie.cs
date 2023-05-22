@@ -9,12 +9,18 @@ namespace Loteria.Models.DbModels
     public class Pytanie
     {
         [Key]
-        public int PytanieId { get; set; }
+        public static int PytanieId;
         public string tresc { get; set; }
+        static Pytanie()
+        {
+            PytanieId = 1;
+        }
 
-        public Pytanie() { }
-        public Pytanie(int PytanieId, string tresc) { 
-            this.PytanieId = PytanieId;
+        public Pytanie() 
+        {
+            PytanieId++;
+        }
+        public Pytanie(string tresc) { 
             this.tresc = tresc; 
         }
 
