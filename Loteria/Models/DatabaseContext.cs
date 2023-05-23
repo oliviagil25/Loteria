@@ -9,7 +9,7 @@ namespace Loteria.Models
 {
     public class DatabaseContext : DbContext
     {
-        public DatabaseContext() : base("LoteriaConnectionString") { }
+        public DatabaseContext() : base("BookAppConnectionString") { }
 
         public DbSet<Uczestnik> Uczestnicy { get; set; }
         public DbSet<Nagroda> Nagrody { get; set;}

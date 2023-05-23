@@ -18,7 +18,7 @@ namespace Loteria.Controllers
         // GET: Uczestniks
         public ActionResult Index()
         {
-            return View(db.Uczestnicy.ToList());
+            return View();
         }
 
         // GET: Uczestniks/Details/5
@@ -52,7 +52,7 @@ namespace Loteria.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Uczestnicy.Add(uczestnik);
+                db.Uczestnicy.Add(new Uczestnik());
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

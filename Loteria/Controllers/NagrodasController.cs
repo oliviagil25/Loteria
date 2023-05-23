@@ -18,7 +18,7 @@ namespace Loteria.Controllers
         // GET: Nagrodas
         public ActionResult Index()
         {
-            return View(db.Nagrody.ToList());
+            return View();
         }
 
         // GET: Nagrodas/Details/5
